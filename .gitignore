@@ -59,3 +59,4 @@ target/
 VENV/*
 *.sqlite3
 *.log
+static_root/*
