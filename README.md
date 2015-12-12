@@ -8,4 +8,5 @@ A quick way to get a django project running with react
 * pip install -U pip
 * pip install -r requirements.txt
 * python manage.py migrate
+* python manage.py loaddata comment.json
 * python manage.py runserver

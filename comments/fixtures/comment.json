@@ -1,0 +1,18 @@
+[
+  {
+    "model": "comments.comment",
+    "pk": 1,
+    "fields": {
+      "author": "tekton",
+      "comment": "test"
+    }
+  },
+  {
+    "model": "comments.comment",
+    "pk": 2,
+    "fields": {
+      "author": "tekton",
+      "comment": " *test 2* "
+    }
+  }
+]
