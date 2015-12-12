@@ -55,3 +55,7 @@ docs/_build/
 
 # PyBuilder
 target/
+
+VENV/*
+*.sqlite3
+*.log
