@@ -9,7 +9,7 @@ import json
 
 
 def index(request):
-    return render(request, "comments.html")
+    return render(request, "comments2.html")
 
 
 def static(request):

@@ -1,0 +1,32 @@
+{% load staticfiles %}
+{% load compress %}
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Comments - React Tutorial</title>
+    {% compress js %}
+    <script src="{% static 'js/react.js' %}"></script>
+    <script src="{% static 'js/react-dom.js' %}"></script>
+    <script src="{% static 'js/babel.browser.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/marked.min.js' %}"></script>
+
+    <script type="text/jsx" src="{% static 'js/comments/comment.jsx' %}"></script>
+    <script type="text/jsx" src="{% static 'js/comments/comment_list.jsx' %}"></script>
+    <script type="text/jsx" src="{% static 'js/comments/comment_box.jsx' %}"></script>
+    <script type="text/jsx" src="{% static 'js/comments/comment_form.jsx' %}"></script>
+    {% endcompress %}
+  </head>
+  <body>
+    <div id="content"></div>
+    <!--<script src="{% static 'js/comments/tutorial1.js' %}"></script>-->
+    <script type="text/babel">
+      ReactDOM.render( // tutorial1, tutorial9, tutorial11.js, tutorial14
+        <CommentBox url="/comments/api" pollInterval={2000} />,
+        document.getElementById('content')
+      );
+    </script>
+  </body>
+</html>
