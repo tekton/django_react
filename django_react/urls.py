@@ -22,5 +22,6 @@ import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r"^$", views.index),
-    url(r"^comments", include("comments.urls"))
+    url(r"^comments", include("comments.urls")),
+    url(r"^todo", include("todo.urls"))
 ]
