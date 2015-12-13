@@ -10,17 +10,30 @@
     <script src="{% static 'js/react.js' %}"></script>
     <script src="{% static 'js/react-dom.js' %}"></script>
     <script src="{% static 'js/babel.browser.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/marked.min.js' %}"></script>
+    
+
 
     <script type="text/jsx" src="{% static 'js/comments/comment.jsx' %}"></script>
     <script type="text/jsx" src="{% static 'js/comments/comment_list.jsx' %}"></script>
     <script type="text/jsx" src="{% static 'js/comments/comment_box.jsx' %}"></script>
     <script type="text/jsx" src="{% static 'js/comments/comment_form.jsx' %}"></script>
     {% endcompress %}
+
+    <link href="{% static "js/bootstrap/css/bootstrap.css" %}" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'js/bootstrap/js/bootstrap.js' %}"></script>
+<!--     <script type="text/javascript" src="{% static 'js/datetimepicker/js/bootstrap-datetimepicker.min.js' %}"></script>
+ -->    <script type="text/javascript" src="{% static 'js/jquery-colorPicker/jquery.colorPicker.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'js/moment/moment.js' %}"></script>
   </head>
   <body>
-    <div id="content"></div>
+    <div class="container">
+        <div id="content"></div>
+    </div>
+    
     <!--<script src="{% static 'js/comments/tutorial1.js' %}"></script>-->
     <script type="text/babel">
       ReactDOM.render( // tutorial1, tutorial9, tutorial11.js, tutorial14
@@ -28,5 +41,11 @@
         document.getElementById('content')
       );
     </script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $('#color').colorPicker();
+        });
+    </script>
+    
   </body>
 </html>
