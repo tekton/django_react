@@ -8,7 +8,6 @@ from django.db import models
 class Comment(models.Model):
 
     author = models.CharField(max_length=255, blank=True, null=True)
-    playbook_name = models.CharField(max_length=255, blank=True, null=True)
     comment = models.TextField()
 
     class Meta:
