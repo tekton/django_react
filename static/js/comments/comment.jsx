@@ -10,7 +10,8 @@ var Comment = React.createClass({
         <h2 className="commentAuthor">
           {this.props.author}
         </h2>
-          <span dangerouslySetInnerHTML={this.rawMarkup()} />
+          <div dangerouslySetInnerHTML={this.rawMarkup()} />
+          <span className="playbook_legend">Playbook:</span> <span clasName="playbbok">{this.props.playbook_name}</span>
       </div>
     );
   }

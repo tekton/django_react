@@ -26,7 +26,9 @@ def tutorial_api(request):
         print(request.body)
         _body = json.loads(request.body)
         try:
-            new_comment = Comment(author=_body["author"], comment=_body["comment"])
+            new_comment = Comment(author=_body["author"],
+                                  comment=_body["comment"],
+                                  playbook_name=_body["playbook_name"])
             new_comment.save()
         except Exception as e:
             print(e)
